@@ -2,7 +2,7 @@
 title: "Valency-Synth: literature-grounded synthesizability and synthesis routes for non-oxide perovskites"
 ---
 
-**Team:** Rushik Desai · **Code:** <https://github.com/rushikd27/valency-synth> · **Platforms:** Valency, Claude Code
+**Team:** Rushik Desai, Juan Carlos Verduzco (Purdue University) · **Code:** <https://github.com/rushikd27/valency-synth> · **Platforms:** Valency, Claude Code
 
 **Problem.** DFT proposes thousands of halide and chalcogenide perovskites, but only a small fraction are ever made, and the ones that are come with no instructions. Our earlier positive–unlabeled (PU) model ([Desai et al., arXiv:2510.06166](https://arxiv.org/abs/2510.06166)) learns synthesizability from 1,228 compositions/polymorphs (251 synthesized) with DFT decomposition energy and band gap. Two questions remained: *can we check it against the literature without relying on our own labels*, and *once a candidate scores high, how would you make it?*
 
