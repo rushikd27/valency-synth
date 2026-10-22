@@ -1,0 +1,30 @@
+{
+ "composition": {
+  "recall@0.5": 0.7723577235772358,
+  "median_pctile_vs_unlabeled": 0.9570112589559877,
+  "pu_auc": 0.877341455093159,
+  "unlabeled_pred_pos_rate@0.5": 0.23439099283520984,
+  "n_hidden_pos": 246
+ },
+ "composition+structure": {
+  "recall@0.5": 0.7804878048780488,
+  "median_pctile_vs_unlabeled": 0.9672466734902764,
+  "pu_auc": 0.8898111857270056,
+  "unlabeled_pred_pos_rate@0.5": 0.21596724667349027,
+  "n_hidden_pos": 246
+ },
+ "composition+structure+DFT": {
+  "recall@0.5": 0.8495934959349594,
+  "median_pctile_vs_unlabeled": 0.9626407369498464,
+  "pu_auc": 0.9154454901764985,
+  "unlabeled_pred_pos_rate@0.5": 0.1780962128966223,
+  "n_hidden_pos": 246
+ },
+ "DFT only": {
+  "recall@0.5": 0.8211382113821138,
+  "median_pctile_vs_unlabeled": 0.9442169907881268,
+  "pu_auc": 0.8591881568764511,
+  "unlabeled_pred_pos_rate@0.5": 0.28556806550665303,
+  "n_hidden_pos": 246
+ }
+}
