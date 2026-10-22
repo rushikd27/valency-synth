@@ -2,3 +2,4 @@ __pycache__/
 *.pyc
 data/valency/*.raw.json
 data/valency/raw/
+data/valency/w2v_*
