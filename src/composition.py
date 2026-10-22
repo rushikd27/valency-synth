@@ -36,7 +36,7 @@ def parse_name(name):
         pat = re.compile(r"\(([^()]*)\)(\d*\.?\d*)")
         while "(" in text:
             def rep(m):
-                mult = float(m.group(2)) if m.group(2) else 1.0
+                mult = float(m.group(2)) if m.group(2) not in ("", ".") else 1.0
                 inner = _tokens(m.group(1))
                 return "".join(f"{k}{v * mult:g}" for k, v in inner.items())
             new = pat.sub(rep, text)
