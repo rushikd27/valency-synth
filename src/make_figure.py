@@ -43,13 +43,13 @@ ax[0].text(2000.5, yc.max() * 0.92, "11,929 formula mentions\n1,914 compositions
 # (b) external test ranks
 test_all = lit[lit.n_synth >= 1].index
 for i, (col, c, lab) in enumerate([("all | base (comp+struct+DFT)", BLUE, "DFT+composition"),
-                                    ("all | base+nbr", ORANGE, "+ Valency neighbours")]):
+                                    ("all | base+nbr", ORANGE, "+ Valency neighbors")]):
     p = pctiles(col, test_all) * 100
     jitter = np.random.default_rng(i).uniform(-0.12, 0.12, len(p))
     ax[1].scatter(np.full(len(p), i) + jitter, p, s=18, color=c, edgecolor="white", lw=0.6, zorder=3)
     ax[1].hlines(np.median(p), i - 0.25, i + 0.25, color=INK, lw=1.5, zorder=4)
     ax[1].text(i + 0.28, np.median(p), f"median {np.median(p):.0f}", va="center", color=INK, fontsize=8)
-ax[1].set_xticks([0, 1], ["DFT+comp.", "+ Valency\nneighbours"])
+ax[1].set_xticks([0, 1], ["DFT+comp.", "+ Valency\nneighbors"])
 ax[1].set_xlim(-0.5, 1.9)
 ax[1].set_ylabel("percentile among unlabeled")
 ax[1].set_title("b  Literature-confirmed hidden positives")
@@ -61,7 +61,7 @@ R = json.load(open("results/valency_ablation.json"))
 metrics = [("ext_auc", "AUC"), ("ext_recall@0.5", "recall@0.5")]
 x = np.arange(len(metrics))
 for j, (key, c, lab) in enumerate([("2020-01-01 | base (comp+struct+DFT)", BLUE, "DFT+composition"),
-                                    ("2020-01-01 | base+nbr", ORANGE, "+ neighbours (pre-2020 only)")]):
+                                    ("2020-01-01 | base+nbr", ORANGE, "+ neighbors (pre-2020 only)")]):
     vals = [R[key][m] for m, _ in metrics]
     bars = ax[2].bar(x + (j - 0.5) * 0.36, vals, 0.34, color=c, label=lab)
     for b, v in zip(bars, vals):
