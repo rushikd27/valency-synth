@@ -76,4 +76,8 @@ ax[2].set_axisbelow(True)
 
 fig.tight_layout()
 fig.savefig("results/figure.png", dpi=220)
+fig.canvas.draw()
+for a, tag in zip(ax, "abc"):  # individual panels for the video slides
+    bb = a.get_tightbbox(fig.canvas.get_renderer()).transformed(fig.dpi_scale_trans.inverted()).padded(0.08)
+    fig.savefig(f"results/figure_{tag}.png", dpi=220, bbox_inches=bb)
 print("saved results/figure.png")
