@@ -35,3 +35,22 @@ python3 src/recipes.py "all | base+nbr" 25
 - [x] Literature features: mentions, word2vec embeddings, synthesized-neighbor similarity
 - [x] Ablations + temporal split
 - [x] Recipe routes for top candidates (abstract level; full recipes via Scite where indexed)
+
+## Results (50 bags; `results/valency_ablation.csv`)
+Hidden-positive CV on the dataset labels, plus an external test: compositions
+unlabeled in final_data.csv that the Valency corpus reports in a synthesis
+context (never used as positives).
+
+| layers built from | feature set | recall@0.5 | PU-AUC | ext AUC | ext median pctile | ext recall@0.5 |
+|---|---|---|---|---|---|---|
+| all abstracts (n_ext=23) | base (comp+struct+DFT) | 0.858 | 0.916 | 0.858 | 0.882 | 0.478 |
+| | base+w2v | 0.837 | 0.907 | 0.850 | 0.889 | 0.565 |
+| | base+nbr | 0.846 | 0.911 | 0.864 | 0.908 | 0.565 |
+| | base+w2v+nbr | 0.825 | 0.907 | 0.861 | 0.897 | 0.565 |
+| pre-2020 abstracts, test = first reported 2020+ (n_ext=13) | base | 0.858 | 0.916 | 0.904 | 0.951 | 0.615 |
+| | base+w2v | 0.829 | 0.906 | 0.880 | 0.948 | 0.615 |
+| | base+nbr | 0.874 | 0.913 | 0.918 | 0.953 | 0.769 |
+| | base+w2v+nbr | 0.833 | 0.908 | 0.904 | 0.948 | 0.692 |
+
+Candidate routes for the top 25 unlabeled compositions (model `all | base+nbr`):
+`results/candidate_routes.md`.

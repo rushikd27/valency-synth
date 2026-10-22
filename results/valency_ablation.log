@@ -1,0 +1,10 @@
+== layers from all abstracts: reference set=766, external test comps in data=54
+base (comp+struct+DFT)   recall@0.5=0.858  median_pctile_vs_unlabeled=0.962  pu_auc=0.916  unlabeled_pred_pos_rate@0.5=0.178  n_hidden_pos=246  ext_auc=0.858  ext_median_pctile=0.882  ext_recall@0.5=0.478  n_ext=23
+base+w2v                 recall@0.5=0.837  median_pctile_vs_unlabeled=0.955  pu_auc=0.907  unlabeled_pred_pos_rate@0.5=0.181  n_hidden_pos=246  ext_auc=0.850  ext_median_pctile=0.889  ext_recall@0.5=0.565  n_ext=23
+base+nbr                 recall@0.5=0.846  median_pctile_vs_unlabeled=0.967  pu_auc=0.911  unlabeled_pred_pos_rate@0.5=0.186  n_hidden_pos=246  ext_auc=0.864  ext_median_pctile=0.908  ext_recall@0.5=0.565  n_ext=23
+base+w2v+nbr             recall@0.5=0.825  median_pctile_vs_unlabeled=0.961  pu_auc=0.907  unlabeled_pred_pos_rate@0.5=0.189  n_hidden_pos=246  ext_auc=0.861  ext_median_pctile=0.897  ext_recall@0.5=0.565  n_ext=23
+== layers from 2020-01-01 abstracts: reference set=239, external test comps in data=20
+base (comp+struct+DFT)   recall@0.5=0.858  median_pctile_vs_unlabeled=0.962  pu_auc=0.916  unlabeled_pred_pos_rate@0.5=0.178  n_hidden_pos=246  n_ext=13  ext_auc=0.904  ext_median_pctile=0.951  ext_recall@0.5=0.615
+base+w2v                 recall@0.5=0.829  median_pctile_vs_unlabeled=0.961  pu_auc=0.906  unlabeled_pred_pos_rate@0.5=0.185  n_hidden_pos=246  ext_auc=0.880  ext_median_pctile=0.948  ext_recall@0.5=0.615  n_ext=13
+base+nbr                 recall@0.5=0.874  median_pctile_vs_unlabeled=0.961  pu_auc=0.913  unlabeled_pred_pos_rate@0.5=0.193  n_hidden_pos=246  ext_auc=0.918  ext_median_pctile=0.953  ext_recall@0.5=0.769  n_ext=13
+base+w2v+nbr             recall@0.5=0.833  median_pctile_vs_unlabeled=0.961  pu_auc=0.908  unlabeled_pred_pos_rate@0.5=0.191  n_hidden_pos=246  ext_auc=0.904  ext_median_pctile=0.948  ext_recall@0.5=0.692  n_ext=13
